@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class DescriptiveStatistics {
+  constructor(data) {
+    this.data = data;
+  }
+//   measures of central tendency
+// MEAN
+mean(){
+    let sum = 0;
+    for(let i =0; i < this.data.length; i++ ){
+        sum += this.data[i]
+       return sum/this.data.lenght;
+    }
+}
+
+// MEDIAN
+median(){
+   let sorted = [...this.data].sort((a,b) => (a-b))
+   let mid = Math.floor(sorted.length/2)
+   return sorted[mid]
+    
+}
+//MODE
+mode(){
+    let frequentnumber = []
+    for(let i =0; i < this.data.length; i++ ){
+        let number = this.data[i]
+        if (frequentnumber[number] =! number){
+            frequentnumber[number] = 1
+
+        } 
+        // if(frequentlyOccur.indexOf(this.data[i])!=-1){
+        //     frequentlyOccur.push(this.data[i])
+        // }
+    }
+    }   
+
+}
+
+
+// MEASURE OF DISPERSION 
+class DispersionMeasure {
+  constructor(data) {
+    this.data = data;
+  }
+}
+
+// RANGE 
+calculateRange(){
+    if(this.data.length === 0){
+return null;
+    }
+const sortedData = [...this.data].sort((a,b) =>(a-b))
+return sortedData[sortedData.length - 1] - sortedData[0]
+
+
+// VARIANCE 
+calculateVarience(){
+    if(this.data.length === 0){
+return null;
+    }
+
+    // const mean = this.Mean();
+    // const squareDifferences =
+
+}
+}
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
